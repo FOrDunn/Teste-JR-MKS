@@ -34,6 +34,7 @@ export const ItemCart: React.FC<Props> = ({ cartItem }) => {
   return (
     <CartItem>
       <AiOutlineClose
+        title="remove item"
         width={25}
         onClick={() => {
           dispatch(deleteItem(product.id));
@@ -47,6 +48,7 @@ export const ItemCart: React.FC<Props> = ({ cartItem }) => {
           <QuantityTitle>Qtd:</QuantityTitle>
           <QuantityButtons>
             <IncreaseQuantityButton
+              title="descrease quantity button"
               onClick={() => {
                 dispatch(decrementItemQuantity(product.id));
               }}
@@ -54,9 +56,12 @@ export const ItemCart: React.FC<Props> = ({ cartItem }) => {
               -
             </IncreaseQuantityButton>
             <HR />
-            <QuantityValue>{quantity}</QuantityValue>
+            <QuantityValue title={`quantidade:${quantity}`}>
+              {quantity}
+            </QuantityValue>
             <HR />
             <DecreaseQuantityButton
+              title="increase quantity button"
               onClick={() => {
                 dispatch(incrementItemQuantity(product.id));
               }}

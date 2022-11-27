@@ -4,7 +4,7 @@ interface Product {
   brand: string;
   photo: string;
   description: string;
-  price: number;
+  price: string;
 }
 
 interface CartItem {

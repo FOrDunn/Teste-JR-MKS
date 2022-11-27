@@ -28,11 +28,13 @@ export const ShoppingCart: React.FC<Props> = ({ isOpen, setIsOpen }) => {
 
   const totalPrice = shoppingCartItems.reduce(
     (atualCount, shoppingCartItem) =>
-      atualCount + shoppingCartItem.product.price * shoppingCartItem.quantity,
+      atualCount +
+      Number(shoppingCartItem.product.price) * shoppingCartItem.quantity,
     0
   );
 
   const totalPriceText = `R$ ${Number(totalPrice).toFixed()}`;
+
   return (
     <Container data-is-open={isOpen}>
       <CartBody>
@@ -51,7 +53,7 @@ export const ShoppingCart: React.FC<Props> = ({ isOpen, setIsOpen }) => {
         </ItemsListContainer>
         <FinalPriceDiv>
           <p>Total:</p>
-          <p>{totalPriceText}</p>
+          <p title="preco total">{totalPriceText}</p>
         </FinalPriceDiv>
       </CartBody>
       <CartFooter>
