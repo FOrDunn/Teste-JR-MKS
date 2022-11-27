@@ -1,34 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+<h1 align="center">
+    Teste MKS Shop
+</h1>
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## 💻 Sobre o projeto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Projeto desenvolvido com diversas tecnologias atuais recebendo os produtos da api enviada.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## ⚙️ Funcionalidades
 
-## Learn More
+- [x] Listagem de produtos enviada pela api
+- [x] Adicao de items ao carrinho(caso ja exista o item e adicionado 1 a quantidade do mesmo)
+- [x] Opcao de adicionar ou diminuir a quantidade de items do carrinho
+  - [x] caso a quantidade de items do carrinho chegue a 0, o item e retirado do carrinho
+- [x] Opcao de retirar o item completamente do carrinho
+- [x] Feitos diversos testes para verificar a integridade da aplicacao
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🚀 Link do projeto online na vercel
 
-## Deploy on Vercel
+**[Site no ar](https://teste-jr-krpogw4pd-fordunn.vercel.app/)**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Como rodar o projeto no seu computador
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Para executar o projeto no seu computador, baixe o projeto no seu computador e use o comando yarn
+Depois disso execute o comando yarn dev
+
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+#### **Website**  ([Next.js](https://nextjs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
+
+-   **React**
+-   **React Icons**
+-   **Axios**
+-   **Next.js**
+-   **Redux Toolkit**
+-   **Jest**
+
+
+
