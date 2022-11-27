@@ -43,6 +43,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **Next.js**
 -   **Redux Toolkit**
 -   **Jest**
+-   **Styled-components**
 -   **React Toastify**
 
 
