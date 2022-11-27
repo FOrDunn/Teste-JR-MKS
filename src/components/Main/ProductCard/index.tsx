@@ -13,6 +13,8 @@ import {
   ButtonText,
 } from "./styles";
 import { RiShoppingBag3Line } from "react-icons/ri";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 interface Props {
   product: Product;
@@ -23,6 +25,20 @@ export const ProductCard: React.FC<Props> = ({ product }) => {
   const productPriceText = `R$ ${Number(product.price).toFixed()}`;
 
   const dispatch = useDispatch();
+
+  const handleButton = () => {
+    toast.success("Produto adicionado no carrinho!", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    dispatch(addItem(product));
+  };
 
   return (
     <Container>
@@ -43,14 +59,22 @@ export const ProductCard: React.FC<Props> = ({ product }) => {
           {product.description}
         </ProductDescription>
       </CardBody>
-      <CardFooter
-        onClick={() => {
-          dispatch(addItem(product));
-        }}
-      >
+      <CardFooter onClick={handleButton}>
         <RiShoppingBag3Line width={20} />
         <ButtonText>COMPRAR</ButtonText>
       </CardFooter>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </Container>
   );
 };
