@@ -1,24 +1,25 @@
 import Image from "next/image";
 import { AiOutlineClose } from "react-icons/ai";
-import {
-  CartItem,
-  ItemName,
-  ItemPrice,
-  ItemQuantityDiv,
-  QuantityTitle,
-  QuantityButtons,
-  IncreaseQuantityButton,
-  DecreaseQuantityButton,
-  HR,
-  QuantityValue,
-  PriceQuantityContainer,
-} from "../styles";
 import { useDispatch } from "react-redux";
 import {
   decrementItemQuantity,
   incrementItemQuantity,
   deleteItem,
 } from "store/ShoppingCart.store";
+
+import {
+  CartItem,
+  DecreaseQuantityButton,
+  HR,
+  IncreaseQuantityButton,
+  ItemName,
+  ItemPrice,
+  ItemQuantityDiv,
+  PriceQuantityContainer,
+  QuantityButtons,
+  QuantityTitle,
+  QuantityValue,
+} from "./styles";
 
 interface Props {
   cartItem: CartItem;

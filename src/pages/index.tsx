@@ -1,38 +1,34 @@
 import Footer from "components/Footer";
 import NavBar from "components/Header";
 import Main from "components/Main";
-
-import { GetStaticProps, NextPage } from "next";
-import { api } from "../services/api";
+import { NextPage } from "next";
+import { useQuery } from "@tanstack/react-query";
 import { HomeContainer } from "styles/styles";
+import { api } from "services/api";
 
-interface Props {
+interface Data {
   products: Product[];
 }
 
-export const Home: NextPage<Props> = ({ products }) => {
+export const Home: NextPage = () => {
+  const { isLoading, data } = useQuery({
+    queryKey: ["productsData"],
+    queryFn: async () => {
+      const params = { page: 1, rows: 8, sortBy: "id", orderBy: "ASC" };
+
+      const products = (await api.get<Data>("/products", { params })).data
+        .products;
+
+      return products;
+    },
+  });
   return (
     <HomeContainer>
       <NavBar />
-      <Main products={products} />
+      <Main isLoading={isLoading} products={data} />
       <Footer />
     </HomeContainer>
   );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  const params = { page: 1, rows: 8, sortBy: "id", orderBy: "ASC" };
-
-  const products = await (
-    await api.get<Props>("/products", { params })
-  ).data.products;
-
-  return {
-    props: {
-      products,
-    },
-    revalidate: 60,
-  };
 };
 
 export default Home;
