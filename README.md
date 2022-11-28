@@ -22,16 +22,20 @@ Projeto desenvolvido com diversas tecnologias atuais recebendo os produtos da ap
 - [x] Fechar o carrinho clicando no botao X em na parte de cima do objeto
 - [x] Feitos diversos testes para verificar a integridade da aplicacao
 
-
+---
 
 ## 🚀 Link do projeto online na vercel
 
 **[Site no ar](https://teste-jr-mks.vercel.app/)**
 
+---
+
 ## 🚀 Como rodar o projeto no seu computador
 
 Para executar o projeto no seu computador, baixe o projeto no seu computador e use o comando yarn
 Depois disso execute o comando yarn dev
+
+---
 
 ## 🛠 Tecnologias
 
