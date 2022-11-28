@@ -24,6 +24,17 @@ Projeto desenvolvido com diversas tecnologias atuais recebendo os produtos da ap
 
 ---
 
+## ⚙️ Testes Realizados
+
+- [x] Verificacoes de todas as funcionalidades da store addItem, incrementItemQuantity, decrementItemQuantity, deleteItem(redux toolkit)
+- [x] Verificacao se ao clicar no botao de comprar adicionar o item ao estado/adicionaria 1 a quantidade do objeto
+- [x] Verificacao se ao clicar no botao de aumentar a quantidade no carrinho adicionaria 1 a quantidade do objeto
+- [x] Verificacao se ao clicar no botao de diminuir a quantidade no carrinho diminuiria 1 a quantidade do objeto/caso a quantidade chegue a 0, o item e eliminado
+- [x] Verificacao se ao clicar no Botao X em cima do item, o item seria excluido do estado(array)
+- [x] Verificacao se a conta do total, estaria correta
+
+---
+
 ## 🚀 Link do projeto online na vercel
 
 **[Site no ar](https://teste-jr-mks.vercel.app/)**
