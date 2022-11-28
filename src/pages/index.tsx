@@ -5,6 +5,7 @@ import { NextPage } from "next";
 import { useQuery } from "@tanstack/react-query";
 import { HomeContainer } from "styles/styles";
 import { api } from "services/api";
+import Head from "next/head";
 
 interface Data {
   products: Product[];
@@ -24,6 +25,13 @@ export const Home: NextPage = () => {
   });
   return (
     <HomeContainer>
+      <Head>
+        <title>Home | Loja da MKS sistemas</title>
+        <link
+          rel="icon"
+          href="https://imagens-voitto.s3.amazonaws.com/voitto-icon.png"
+        />
+      </Head>
       <NavBar />
       <Main isLoading={isLoading} products={data} />
       <Footer />

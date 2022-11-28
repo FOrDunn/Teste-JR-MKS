@@ -42,10 +42,6 @@ export default class MyDocument extends Document {
       <Html lang="pt-BR">
         <Head>
           <meta charSet="utf-8" />
-          <link
-            rel="icon"
-            href="https://imagens-voitto.s3.amazonaws.com/voitto-icon.png"
-          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
